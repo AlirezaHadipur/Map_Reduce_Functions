@@ -1,8 +1,3 @@
-# Seyed Alireza Hadipoor (4033614053)
-# University Of Isfahan
-# Third Exercise of Advanced DB Course
-# 1403/08/?
-
 import numpy as np, pandas as pd
 
 dataset = pd.read_csv("hotel_reviews.csv")
