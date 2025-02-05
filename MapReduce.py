@@ -1,3 +1,8 @@
+# Seyed Alireza Hadipoor (4033614053)
+# University Of Isfahan
+# Third Exercise of Advanced DB Course
+# 1403/08/?
+
 import numpy as np, pandas as pd
 
 dataset = pd.read_csv("hotel_reviews.csv")
@@ -95,4 +100,15 @@ shuffled_data = shuffle_and_sort(mapped_data)
 
 reduced_data = reducer(shuffled_data)
 
+print('All hotel in dataset')
 print(reduced_data)
+print('----------------------------------------------')
+
+print("10 most popular hotels")
+sorted_data = dict(sorted(reduced_data.items(), key=lambda item: item[1]['positive'], reverse=True))
+print(dict(list(sorted_data.items())[:10]))
+print('----------------------------------------------')
+
+print("10 most hateful hotels")
+sorted_data = dict(sorted(reduced_data.items(), key=lambda item: item[1]['negative'], reverse=True))
+print(dict(list(sorted_data.items())[:10]))
